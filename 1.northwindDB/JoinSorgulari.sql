@@ -169,3 +169,40 @@ group by s.CompanyName
 	   from Employees
 
 
+	   --SUBQUERY => İÇ İÇE SORGU YADA ALT SORGU
+
+	   select * from Products
+	   where UnitPrice = (select max(UnitPrice) from Products)
+
+	   --ortalama fiyatın altında kalan urunler hanigleridir
+
+	   -- ürünler tablosunda hiç satışı yapılmayan ürün var mı 
+
+	   -- hiç sipariş almayan persoellerin listesi
+
+	   --ortalama fiyatın altında kalan urunler hanigleridir
+	   select * from Products 
+	   where UnitPrice < (select avg(UnitPrice) from Products)
+
+	   -- ürünler tablosunda hiç satışı yapılmayan ürün var mı 
+	   select * from Products
+	   where ProductID not in(select ProductID from [Order Details])
+
+	    -- hiç sipariş almayan persoellerin listesi
+
+		select * from Employees e
+		where  not exists (select EmployeeID from Orders where orders.EmployeeID=e.EmployeeID)
+
+
+	   
+
+
+
+
+
+
+
+
+
+
+
