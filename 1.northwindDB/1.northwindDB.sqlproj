@@ -101,4 +101,7 @@
     <Build Include="dbo\Stored Procedures\CustOrderHist.sql" />
     <Build Include="dbo\Stored Procedures\SalesByCategory.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="JoinSorgulari.sql" />
+  </ItemGroup>
 </Project>
