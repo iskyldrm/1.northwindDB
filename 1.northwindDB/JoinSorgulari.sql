@@ -1,5 +1,5 @@
-﻿select Categories.CategoryName,count(Products.ProductID) urunler
-from Products,Categories
-where  Products.CategoryID=Categories.CategoryID
-group by Categories.CategoryName
-order by 2 desc
+﻿Select e.FirstName ,e.LAstName ,year(o.OrderDate) Yil, Count(o.OrderID) SatisAdedi 
+from Orders o
+inner join Employees e on o.EmployeeId=e.EmployeeId
+Group by e.FirstName ,e.LAstName ,year(o.OrderDate)
+Order by e.FirstName ,Yil 
