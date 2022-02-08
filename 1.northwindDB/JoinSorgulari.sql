@@ -89,3 +89,10 @@ inner join Orders o on o.OrderID = od.OrderID
 where year(o.OrderDate) = 1997
 group by p.ProductName
 order by ciro desc
+
+--3kargo firmalarının tısıdğı siparş sayisi nedir ?
+
+
+select s.CompanyName, count(o.ShipVia) adet from Orders o , Shippers s
+where o.ShipVia = s.ShipperID
+group by s.CompanyName
