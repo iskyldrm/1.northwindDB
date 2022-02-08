@@ -157,3 +157,15 @@ group by s.CompanyName
 	   order by ciro desc
 
 
+
+	   --SELECT CASE WHEN KULLANIMI
+
+	   select FirstName,LastName, 
+	   case country 
+	   when 'USA' THEN 'Amerika' 
+	   when 'UK' THEN 'iNGİLİTERE' 
+	   END
+
+	   from Employees
+
+
