@@ -96,3 +96,25 @@ order by ciro desc
 select s.CompanyName, count(o.ShipVia) adet from Orders o , Shippers s
 where o.ShipVia = s.ShipperID
 group by s.CompanyName
+
+
+--JOİN SORGULARI
+/*
+İNNER JOİN KULLANIMI
+*/
+
+	select * from Shippers
+	--update Shippers set CompanyName = 'Aras Kargo' where ShipperID=8
+
+	select distinct s.CompanyName,count(o.OrderID) 
+	from Orders o
+	right join Shippers s on s.ShipperID=o.ShipVia
+	--where year(OrderDate) = 1996
+	group by s.CompanyName
+
+
+	select * from Categories
+	select * 
+	from Products
+	full outer join Categories c on c.CategoryID = Products.ProductID
+
