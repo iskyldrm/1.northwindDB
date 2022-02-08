@@ -118,3 +118,42 @@ group by s.CompanyName
 	from Products
 	full outer join Categories c on c.CategoryID = Products.ProductID
 
+
+	---HAVİNG KULLANIMI 
+
+	--group by dan soonra kullanırlır
+
+
+
+	Select od.ProductID,
+       count(od.Quantity) SatısAdedi,
+	   sum(od.UnitPrice*od.Quantity) Ciro
+	   from Orders o
+	   inner join [Order Details] od on od.OrderID = o.OrderID
+	   where year(o.OrderDate)=1997
+	   Group by od.ProductID
+	   having count(Products.ProductID) <5
+
+	   --HAVİNG SORUSU
+	   -- 97 yılındaki ürün satışlarının aylara göre dağılımı
+
+	   select month(OrderDate),count(od.Quantity) as adet  
+	   from Orders o, [Order Details] od 
+	   where year(OrderDate) = 1997
+	   group by  month(OrderDate)
+	   
+	   
+	   select p.ProductName,
+	   sum(od.Quantity) adet,
+	   --1. ciro yöntemi sum(od.Quantity*od.UnitPrice) - ((od.Quantity*od.UnitPrice)*od.Discount)
+	   --2. c,ro yöntemi
+	   sum(od.UnitPrice*(1-od.Discount)*od.Quantity) ciro
+	   from Products p
+	   inner join [Order Details] od on od.ProductID = p.ProductID
+	   inner join orders o on o.OrderID = od.OrderID
+	   where year(o.OrderDate) = 1997
+	   group by p.ProductName
+	   having  sum(od.UnitPrice*(1-od.Discount)*od.Quantity)<10000
+	   order by ciro desc
+
+
