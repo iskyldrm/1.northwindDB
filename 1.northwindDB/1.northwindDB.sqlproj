@@ -104,5 +104,6 @@
   <ItemGroup>
     <None Include="JoinSorgulari.sql" />
     <None Include="StoredProsedureDegiskenler.sql" />
+    <None Include="WiewTanimlama.sql" />
   </ItemGroup>
 </Project>

@@ -105,6 +105,8 @@ print 'Çıkarma :' + convert(varchar,(@sayi1 - @sayi2))
 end
 
 
+-- DBO.DORTİŞLEM ÇALIŞTIRMAK İÇİN YWNİ WUERY GEREKLİ 
+
 
 
 
