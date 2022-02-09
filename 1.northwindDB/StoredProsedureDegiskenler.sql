@@ -95,13 +95,17 @@ begin
 
 --set @sonuc = @sayi1/@sayi2
 
-print 'Çarpım :' + CONVERT(VARCHAR(50),(@sayi1*@sayi2))
---print 'Bölme :' + (@sayi1/@sayi2)
+print 'Çarpım :' + CONVERT(VARCHAR,(@sayi1*@sayi2))
+print 'Bölme :' + convert(varchar,(@sayi1/@sayi2))
 
---print 'Toplama :' + (@sayi1+@sayi2)
+print 'Toplama :' + convert(varchar,(@sayi1+@sayi2))
 
---print 'Çıkarma :' + (@sayi1 - @sayi2)
+print 'Çıkarma :' + convert(varchar,(@sayi1 - @sayi2))
 
 end
+
+
+
+
 
 
