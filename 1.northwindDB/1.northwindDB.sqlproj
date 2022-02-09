@@ -103,5 +103,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="JoinSorgulari.sql" />
+    <None Include="StoredProsedureDegiskenler.sql" />
   </ItemGroup>
 </Project>

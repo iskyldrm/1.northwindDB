@@ -194,6 +194,11 @@ group by s.CompanyName
 		where  not exists (select EmployeeID from Orders where orders.EmployeeID=e.EmployeeID)
 
 
+-- Değişken tanımlamaları
+--stored procedure
+--trigger,wiews,functioon
+
+
 	   
 
 
