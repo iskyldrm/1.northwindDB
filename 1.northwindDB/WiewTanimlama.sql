@@ -18,3 +18,5 @@ group by year(o.OrderDate), p.ProductName
 
 
 select * from UrunlereGoreDagilimi2
+
+select len(ProductName) uzunluk, ProductName from UrunlereGoreDagilimi2
