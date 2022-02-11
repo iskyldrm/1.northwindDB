@@ -106,5 +106,6 @@
     <None Include="StoredProsedureDegiskenler.sql" />
     <None Include="WiewTanimlama.sql" />
     <None Include="JoinSorgulari2.sql" />
+    <None Include="SubQuery.sql" />
   </ItemGroup>
 </Project>
