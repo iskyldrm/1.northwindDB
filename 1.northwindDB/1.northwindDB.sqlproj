@@ -107,5 +107,6 @@
     <None Include="WiewTanimlama.sql" />
     <None Include="JoinSorgulari2.sql" />
     <None Include="SubQuery.sql" />
+    <None Include="Dynamiccssql.sql" />
   </ItemGroup>
 </Project>
